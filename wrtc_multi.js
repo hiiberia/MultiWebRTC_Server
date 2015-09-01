@@ -159,6 +159,7 @@ var httpd = http.createServer(function(req, res){//https.createServer(https_opti
 	}
 	return;
 }).listen(configurationOptions.server_port, configurationOptions.server_ip);;
+    console.log("aqui en wrtc_multi.js");
 
 
 /**
@@ -214,6 +215,7 @@ console.log('Server running at ' + configurationOptions.server_ip + ':' + config
 
 // Socket.io
 var io = require('socket.io').listen(httpd, {log: SOCKET_IO_DEBUG_MODE});
+console.log("Servidor socket.io escuchando en el puerto 1339");
 io.sockets.on('connection', function(socket) {
 	console.log('***** socket.io connection established');  // Debug
 	// Registration
